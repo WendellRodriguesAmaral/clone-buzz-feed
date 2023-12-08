@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import quizz_questions from './../../../assets/data/quizz_questions.json';
 
-
+const A = 'A';
+const B = 'B';
 
 @Component({
   selector: 'app-quizz',
@@ -60,10 +61,10 @@ export class QuizzComponent implements OnInit {
     let optionA:number = 0;
     let optionB:number = 0;
 
-    this.answers.forEach(elem => elem ==  'A' ? optionA++ : optionB++)
+    this.answers.forEach(elem => elem ==  A ? optionA++ : optionB++)
 
     this.answersSelected = quizz_questions.results[
-      optionA > optionB ? "A" : "B"
+      optionA > optionB ? A : B
     ]  
   }
 
